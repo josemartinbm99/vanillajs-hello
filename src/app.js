@@ -1,11 +1,20 @@
-/* eslint-disable */
-import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  let quien = ["Mi canario ", "Mi cocodrilo ", "Mi hermana ", "Mi profesor "];
+  let accion = ["se comió ", "rompió ", "quemó ", "alquiló "];
+  let que = ["mi ordenador ", "la casa ", "España ", "el internet "];
+  let cuando = [
+    "el año pasado.",
+    "antes de la clase.",
+    "ayer.",
+    "no sé cuando."
+  ];
+  let palabra1 = Math.floor(Math.random() * quien.length);
+  let palabra2 = Math.floor(Math.random() * accion.length);
+  let palabra3 = Math.floor(Math.random() * que.length);
+  let palabra4 = Math.floor(Math.random() * cuando.length);
+
+  document.querySelector("#excuse").innerHTML =
+    quien[palabra1] + accion[palabra2] + que[palabra3] + cuando[palabra4];
 };
